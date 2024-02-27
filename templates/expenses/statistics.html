@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div class="row container" style="margin-top:20px;">
+    {% include 'partials/messages.html' %}
+    <div class="col-md mb-3">
+        <nav aria-label="breadcrumb" style="background-color:#F0F0F0; padding: 10px 20px 0.5px 10px; text-align:center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a style="text-decoration:none;" href="{% url 'expenses' %}">Expenses</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Summary</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="col-md-2">
+        <a href="{% url 'add-expense' %}" class="btn btn-primary" style="float:right;">Add Expense</a>
+    </div>
+    <hr>
+
+
+</div>
+<div class="" style="display: inline-block;">
+    <div class="chart-container " style="position: absolute; height:60vh; width:120vw">
+        <canvas id="firstchart"></canvas>
+
+    </div>
+    <div class="chart-container " style="position: absolute; top: 250px; left: 750px; height:50vh; width:100vw;">
+        <canvas id="secondchart"></canvas>
+    </div>
+</div>
+  <script src="{% static 'js/statistics.js' %}"></script>
+
+
+{% endblock content %}
