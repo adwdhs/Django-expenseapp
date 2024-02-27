@@ -1,1 +1,1 @@
-# moneyapp
+Website to track your expenses. Account registration, AJAX username and email validation, account activation via email. You can add, edit and delete your expenses. You can also see expenses by category on a chart made with Chart.js in the "Expenses Summary" tab
